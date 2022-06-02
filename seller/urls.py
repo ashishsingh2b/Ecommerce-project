@@ -1,0 +1,11 @@
+from . import views
+from django.urls import path
+
+urlpatterns = [    
+    path('',views.seller_login,name='seller-login'),
+    path('dashboard/',views.dashboard,name='dashboard'),
+    path('add-product/',views.add_product,name='add-product'),
+    path('delete-product/<int:pid>',views.delete_product,name='delete-product'),
+    path('manage-products/',views.manage_products,name='manage-products'),
+
+]
