@@ -1,9 +1,13 @@
+from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from .models import *
 
 # Create your views here.
 def index(request):
     return render(request,'index.html')
+
+def sample(request):
+    return HttpResponse('Home')
 
 def about(request):
     return render(request,'about.html')
